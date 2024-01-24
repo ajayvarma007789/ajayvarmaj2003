@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div><img src="assets/unsplash-oe-8-q-mz-nut-4.png" alt="picture"></div>
+        <hr id="hr">
+        <div class="register1">
+            <h1 id="title">Register</h1>
+            <div id="msg"></div>
+            <div id="reginputs">
+                <div id="usernamec">
+                    <img src="assets/user.svg" alt="user">
+                    <input name="name" id="name"type="text">
+                </div><br>
+                <div id="emailc">
+                    <img src="assets/email-mail.svg" alt="user">
+                    <input name="email" id="email"type="email">
+                </div><br>
+                <div id="passwordc">
+                    <img src="assets/lock.svg" alt="user">
+                    <input name="passord" id="password1"type="password">
+                    <img src="assets/eye-off.svg" alt="">
+                </div><br>
+                <div id="passwordc">
+                    <img src="assets/lock.svg" alt="user">
+                    <input name="Confirm Password" id="password2"type="passoword">
+                    <img src="assets/eye-off.svg" alt="">
+                </div><br>
+            </div>
+            <div id="remember">
+                <input type="checkbox" name="Rememberme" id="Rememberme" >
+                <span>Remember me</span>
+            </div>
+            <div id="regbuttoncontainer"><button type="submit" id="regForm">Register</button></div>
+            <div  id="social">
+                <div href="https://google.com" id="google"><img src="assets/google.png" alt="google" ></div>
+                <div href="https://facebook.com" id="facebook"><img src="assets/facebook-f.png" alt="facebook" ></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+function register(e){
+    e.preventDefault();
+    var name=document.getElementById('name').value;
+    var email=document.getElementById('email').value;
+    var password=document.getElementById('password').value;
+    var password2=document.getElementById('password2').value;
+    var msg = document.getElementById('msg');
+
+    if(name =='' || email == '' || password == '' || password2 == ''){
+            msg.innerHTML = 'please fill out all fields';
+    }else{
+            if(name.length < 3){
+                msg.innerHTML='name must atleast of 3 characters';
+
+            }else{
+                var atpos = email.indexOf('@');
+                var dotpos = email.lastIndexOf('.');
+            if(atpos<1||dotpos<atpos+2||dotpos+2>=email.length){
+                msg.innerHTML='Enter valid Email';
+            }else{
+                if(password!=password2){
+                    msg.innerHTML='password dont match';
+                }
+                //success
+                msg.innerHTML = name+'is registered with email'+email;
+            }
+                  
+        
+            }
+          
+    }
+
+    
+
+}
+document.getElementById('regForm').addEventListener('submit',register,false);
+    </script>
+</body>
+</html>

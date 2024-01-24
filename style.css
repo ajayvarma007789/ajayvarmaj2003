@@ -1,0 +1,129 @@
+#msg{
+    width:100px;
+    height: 40px;
+}
+body{
+    background: #b517ff;
+    display: grid;
+    place-items:center;
+    
+}
+#title{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #CB5DFF;
+    font-weight: 600;
+    
+}
+#container{
+    width: 800px;
+    height: 650px;
+    background-color: white;
+    display: flex;
+    margin-top: 40px;
+    border-radius: 20px;
+    align-items: center;
+}
+#hr{
+    margin-left: 1px;
+    height: 600px;
+    width: 1px;
+    opacity: 0.25;
+    background: #000;
+    margin-right: 30px;
+}
+#name{
+    width:260px;
+    height:25px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    
+}
+#email{
+    width:260px;
+    border: none;
+    height:25px;
+    outline: none;
+    padding-left: 10px;  
+}
+#password1{
+    width:260px;
+    border:none;
+    height:25px;
+    outline: none;   
+    padding-left: 10px;
+}
+#password2{
+    width:260px;
+    border:none;
+    height:25px;
+    outline: none;
+    padding-left: 10px;
+}
+#remember span{
+    font-family: Arial, Helvetica, sans-serif;
+    opacity:75%;
+
+}
+#regbutton{
+    border:none;
+    background-color: #CB5EFF;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFF;
+    width: 188px;
+    height: 39px;
+    border-radius: 20px;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+    
+}
+#regbuttoncontainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#buttonreg{
+    display: flex;
+    
+}
+#google,#facebook{
+    width: 75px;
+    height: 52px;
+    border: 2px solid #CB5DFF;
+    border-radius: 20px;
+    
+
+}
+#google{
+    display :grid;
+    place-items: center;
+}
+#facebook{
+    display :grid;
+    place-items: center;
+}
+#social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+#usernamec{
+    display:flex;
+    border-bottom:1px solid rgba(0, 0, 0, 0.25);
+
+}
+#emailc{
+    display:flex;
+    border-bottom:1px solid rgba(0, 0, 0, 0.25);
+
+}
+#passwordc{
+    display:flex;
+    border-bottom:1px solid rgba(0, 0, 0, 0.25);
+
+}
