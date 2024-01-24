@@ -24,13 +24,13 @@
                 </div><br>
                 <div id="passwordc">
                     <img src="assets/lock.svg" alt="user">
-                    <input name="passord" id="password1"type="password">
-                    <img src="assets/eye-off.svg" alt="">
+                    <input name="password" id="password1"type="password">
+                    <img id="eye"src="assets/eye-off.svg" alt="">
                 </div><br>
                 <div id="passwordc">
                     <img src="assets/lock.svg" alt="user">
-                    <input name="Confirm Password" id="password2"type="passoword">
-                    <img src="assets/eye-off.svg" alt="">
+                    <input name="Confirm Password" id="password2"type="password">
+                    <img id="eye" src="assets/eye-off.svg" alt="">
                 </div><br>
             </div>
             <div id="remember">
@@ -51,7 +51,7 @@ function register(e){
     e.preventDefault();
     var name=document.getElementById('name').value;
     var email=document.getElementById('email').value;
-    var password=document.getElementById('password').value;
+    var password=document.getElementById('password1').value;
     var password2=document.getElementById('password2').value;
     var msg = document.getElementById('msg');
 
@@ -71,18 +71,16 @@ function register(e){
                     msg.innerHTML='password dont match';
                 }
                 //success
-                msg.innerHTML = name+'is registered with email'+email;
+                msg.innerHTML = name+' is registered with email '+email;
             }
                   
         
             }
           
     }
-
-    
-
 }
-document.getElementById('regForm').addEventListener('submit',register,false);
+
+document.getElementById('regForm').addEventListener('click',register);
     </script>
 </body>
 </html>
